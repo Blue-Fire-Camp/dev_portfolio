@@ -48,7 +48,7 @@ export default function GlassNavbar() {
             {/* Logo */}
             <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0">
               <span className="text-xl font-bold bg-gradient-to-r from-foreground to-accent bg-clip-text text-transparent">
-                Malshan Dissanayaka
+                David Lee
               </span>
             </motion.div>
 

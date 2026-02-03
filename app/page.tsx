@@ -127,7 +127,7 @@ export default function Portfolio() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground/800 bg-clip-text text-transparent">
-              Malshan Dissanayaka
+              David Lee
             </h1>
             <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
               Full-Stack Developer
@@ -527,7 +527,7 @@ export default function Portfolio() {
       <footer className="py-8 px-4 border-t border-border">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} Malshan Dissanayaka. Built with Next.js, Tailwind CSS, and Framer Motion.
+            © {new Date().getFullYear()} David Lee. Built with Next.js, Tailwind CSS, and Framer Motion.
           </p>
         </div>
       </footer>
