@@ -44,6 +44,24 @@ export default function Portfolio() {
     { name: "Security, Compliance & Reliability", level: 91 },
   ]
 
+  const experiences = [
+    {
+      role: "Software Development Engineer",
+      company: "Capital One",
+      period: "Sept. 2025 - Present",
+      summary: "Building secure, scalable systems with a focus on performance, reliability, and cloud-native delivery.",
+      skills: ["Payments", "Cloud", "System Design"],
+    },
+    {
+      role: "Senior Smart Bar Assistant",
+      company: "University of Nottingham",
+      period: "2024 - 2025",
+      summary:
+        "Led shift operations, provided primary support for Smart Bar systems, escalated complex incidents, and managed Azure MFA requests.",
+      skills: ["Azure", "Support", "Incident Response"],
+    },
+  ]
+
   const projects = [
     {
       title: "Weather Forecast",
@@ -285,6 +303,61 @@ export default function Portfolio() {
                 </div>
               </Card>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">Experience</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              A snapshot of company roles and impact delivered across engineering and operations.
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {experiences.map((experience, index) => (
+              <motion.div
+                key={`${experience.company}-${experience.role}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="p-6 md:p-8 hover:shadow-lg transition-shadow">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">{experience.role}</h3>
+                      <p className="text-xl font-medium text-gray-800 dark:text-gray-200">{experience.company}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{experience.period}</p>
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">{experience.summary}</p>
+                      <div className="flex flex-wrap gap-2 pt-1">
+                        {experience.skills.map((skill) => (
+                          <Badge key={skill} variant="secondary" className="text-xs">
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="w-16 h-16 rounded-lg bg-muted/70 border border-border flex items-center justify-center text-lg font-semibold text-muted-foreground">
+                      {experience.company
+                        .split(" ")
+                        .map((word) => word[0])
+                        .join("")
+                        .slice(0, 2)}
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
