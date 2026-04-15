@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import type { ComponentType } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -18,12 +19,23 @@ import {
   MapPin,
   Code,
   Brain,
-  Plane,
+  Heart,
   Cloud,
   Pen,
-  BookOpen,
+  UtensilsCrossed,
   PenTool
 } from "lucide-react"
+
+type Project = {
+  title: string
+  description: string
+  icon: ComponentType<{ className?: string }>
+  technologies: string[]
+  liveUrl: string
+  image: string
+  badge?: string
+  flippa?: string
+}
 
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState(false)
@@ -79,7 +91,7 @@ export default function Portfolio() {
     },
   ]
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Weather Forecast",
       description:
@@ -90,57 +102,49 @@ export default function Portfolio() {
       image: "/weather.png",
     },
     {
-      title: "2nd Brain",
+      title: "EchoGPT Frontend",
       description:
-        "SaaS AI study assistant with voice tutor, flashcards, and exam generator. Advanced AI-powered learning platform.",
+        "Frontend for EchoGPT, a full-stack conversational AI app with a responsive chat UI, real-time streaming responses, and Firebase-powered authentication.",
       icon: Brain,
-      badge: "sold",
-      flippa: "https://flippa.com/12066875",
-      technologies: ["React", "Next.js", "AI SDK", "Supabase", "Voice API", "Payment Integration"],
-      liveUrl: "https://2nd-brain-lilac.vercel.app",
+      technologies: ["React", "Vite", "Tailwind CSS", "Firebase", "Gemini API"],
+      liveUrl: "https://echo-gpt-lang-chain-frontend.vercel.app",
       image: "/2nd-brain.png",
     },
     {
-      title: "Travel~I",
+      title: "Draftly",
       description:
-        "Cross-platform web app for trip planning, bookings, and interactive UI/UX. Complete travel companion.",
-      icon: Plane,
-      badge: "sold",
-      flippa: "https://flippa.com/12103094",
-      technologies: ["React", "Next.js", "Maps API", "AI SDK", "Supabase"],
-      liveUrl: "https://travel-i.app",
+        "AI-powered blog writing agent that runs a multi-agent LangGraph pipeline with Tavily research, parallel writers, and export-ready outputs for multiple publishing platforms.",
+      icon: Pen,
+      technologies: ["Next.js", "React", "Tailwind CSS", "FastAPI", "LangGraph", "Tavily API", "OpenRouter"],
+      liveUrl: "https://draftly-woad.vercel.app",
       image: "/travel-i.png",
     },
     {
-      title: "StudyForge",
+      title: "Recipe Finder",
       description:
-        "Create intelligent flashcards, generate adaptive quizzes, and track your progress",
-      icon: BookOpen,
-      badge: "sold",
-      flippa: "https://flippa.com/12202677",
-      technologies: ["React", "Next.js", "Groq API", "AI SDK", "Supabase", "Stripe"],
-      liveUrl: "https://study-forge.app",
+        "Full-stack recipe search app with instant results and detail views. Built with a React (Vite) frontend and a FastAPI backend, using Axios for API calls and environment-based configuration for clean local and deployed setups.",
+      icon: UtensilsCrossed,
+      technologies: ["React", "Vite", "CSS", "Axios", "FastAPI", "Python", "Uvicorn"],
+      liveUrl: "",
       image: "/studyforge.png",
     },
     {
-      title: "Travel~I Android App",
+      title: "Habit-a-Day",
       description:
-        "Native Android version of the Travel~I trip planning app. Seamless bookings, AI itinerary planning, and offline access for travelers.",
-      icon: Plane,
-      badge: "sold",
-      technologies: ["React Native", "Expo", "Maps API", "Android", "AI SDK"],
-      liveUrl: "https://play.google.com/store/apps/details?id=com.maxmalshan.traveli",
-      image: "/traveli-android.png",
-    },
-    {
-      title: "QuillGlow",
-      description:
-        "AI-powered study workspace for notes, flashcards, quizzes, and planning.",
-      icon: PenTool,
+        "TypeScript health assistant powered by a Claude chatbot for conversational nutrition and physical therapy guidance. The agent handles multi-turn Q&A, calorie estimation from natural language, barcode scanning, and a PT practice management backend with dashboards, treatment plans, and clinical notes.",
+      icon: Heart,
       badge: "Live",
-      technologies: ["React", "Next.js", "Gemini API", "Youtube API", "Google Custom Search API", "AI SDK", "Supabase", "Stripe"],
-      liveUrl: "https://quillglow.com",
-      image: "/quillglow.png",
+      technologies: [
+        "TypeScript",
+        "Claude API",
+        "LLM Agents",
+        "Nutrition Guidance",
+        "Barcode Scanning",
+        "Practice Management",
+        "Clinical Notes",
+      ],
+      liveUrl: "",
+      image: "/traveli-android.png",
     },
 
   ]
@@ -168,7 +172,7 @@ export default function Portfolio() {
               Software Engineer at Capital One
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 font-light">
-              AI & SaaS Specialist | Building the Future of Web & Mobile
+               Web & Mobile Development | AI & SaaS Specialist | Cloud Infrastructure & Observability
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
@@ -459,11 +463,13 @@ export default function Portfolio() {
                             sold
                           </Badge>
                         )}
-                        <Button size="sm" variant="ghost" asChild>
-                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4" />
-                          </a>
-                        </Button>
+                        {project.liveUrl ? (
+                          <Button size="sm" variant="ghost" asChild>
+                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="w-4 h-4" />
+                            </a>
+                          </Button>
+                        ) : null}
 
                       </div>
                     </CardTitle>
@@ -484,23 +490,7 @@ export default function Portfolio() {
               </motion.div>
             ))}
           </div>
-          <div className="flex justify-center mt-8">
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="flex items-center gap-2"
-            >
-              <a
-                href="https://github.com/Malshan20?tab=repositories"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="w-5 h-5" />
-                More Works
-              </a>
-            </Button>
-          </div>
+
         </div>
       </section>
 
