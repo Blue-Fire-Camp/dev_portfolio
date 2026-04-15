@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import type { ComponentType } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -22,14 +21,14 @@ import {
   Heart,
   Cloud,
   Pen,
-  UtensilsCrossed,
+  ListTodo,
   PenTool
 } from "lucide-react"
 
-type Project = {
+type PortfolioProject = {
   title: string
   description: string
-  icon: ComponentType<{ className?: string }>
+  icon: typeof Cloud
   technologies: string[]
   liveUrl: string
   image: string
@@ -91,7 +90,7 @@ export default function Portfolio() {
     },
   ]
 
-  const projects: Project[] = [
+  const projects: PortfolioProject[] = [
     {
       title: "Weather Forecast",
       description:
@@ -102,13 +101,23 @@ export default function Portfolio() {
       image: "/weather.png",
     },
     {
+      title: "Taskflow",
+      description:
+        "A modern, responsive todo app built with Next.js, TypeScript, and Tailwind CSS—focused on productivity and a polished daily task workflow.",
+      icon: ListTodo,
+      badge: "Live",
+      technologies: ["React", "Productivity", "TypeScript", "Next.js", "Todo App", "Tailwind CSS", "Vercel"],
+      liveUrl: "https://taskflow-todo-app-woad.vercel.app",
+      image: "/taskflow.png",
+    },
+    {
       title: "EchoGPT Frontend",
       description:
         "Frontend for EchoGPT, a full-stack conversational AI app with a responsive chat UI, real-time streaming responses, and Firebase-powered authentication.",
       icon: Brain,
       technologies: ["React", "Vite", "Tailwind CSS", "Firebase", "Gemini API"],
       liveUrl: "https://echo-gpt-lang-chain-frontend.vercel.app",
-      image: "/2nd-brain.png",
+      image: "/echogpt.png",
     },
     {
       title: "Draftly",
@@ -117,16 +126,7 @@ export default function Portfolio() {
       icon: Pen,
       technologies: ["Next.js", "React", "Tailwind CSS", "FastAPI", "LangGraph", "Tavily API", "OpenRouter"],
       liveUrl: "https://draftly-woad.vercel.app",
-      image: "/travel-i.png",
-    },
-    {
-      title: "Recipe Finder",
-      description:
-        "Full-stack recipe search app with instant results and detail views. Built with a React (Vite) frontend and a FastAPI backend, using Axios for API calls and environment-based configuration for clean local and deployed setups.",
-      icon: UtensilsCrossed,
-      technologies: ["React", "Vite", "CSS", "Axios", "FastAPI", "Python", "Uvicorn"],
-      liveUrl: "",
-      image: "/studyforge.png",
+      image: "/draftly.png",
     },
     {
       title: "Habit-a-Day",
@@ -144,7 +144,7 @@ export default function Portfolio() {
         "Clinical Notes",
       ],
       liveUrl: "",
-      image: "/traveli-android.png",
+      image: "/habitaday.png",
     },
 
   ]
