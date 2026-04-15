@@ -156,6 +156,7 @@ export default function Portfolio() {
           style={{ y }}
           className="absolute inset-0 bg-gradient-to-br from-background via-card to-background"
         />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-indigo-500/10 blur-[130px] rounded-full -z-10 pointer-events-none mix-blend-screen" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -451,7 +452,7 @@ export default function Portfolio() {
                               borderColor: "#f59e0b", // Tailwind yellow-600
                             }}
                           >
-                            Live
+                            Progress
                           </Badge>
                         )}
                         {project.badge === "sold" && (
