@@ -131,7 +131,7 @@ export default function Portfolio() {
     {
       title: "Habit-a-Day",
       description:
-        "TypeScript health assistant powered by a Claude chatbot for conversational nutrition and physical therapy guidance. The agent handles multi-turn Q&A, calorie estimation from natural language, barcode scanning, and a PT practice management backend with dashboards, treatment plans, and clinical notes.",
+        "TypeScript health assistant powered by a Claude chatbot for conversational nutrition and physical therapy guidance.",
       icon: Heart,
       badge: "Progress",
       technologies: [
@@ -139,9 +139,6 @@ export default function Portfolio() {
         "Claude API",
         "LLM Agents",
         "Nutrition Guidance",
-        "Barcode Scanning",
-        "Practice Management",
-        "Clinical Notes",
       ],
       liveUrl: "",
       image: "/habitday.png",
@@ -444,7 +441,7 @@ export default function Portfolio() {
                             </Badge>
                           </a>
                         )}
-                        {project.badge === "Live" && (
+                        {project.badge === "Progress" && (
                           <Badge
                             className="ml-2 text-xs border-yellow-600 bg-yellow-100 text-yellow-800"
                             style={{
