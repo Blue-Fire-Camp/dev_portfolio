@@ -51,7 +51,15 @@ export default function Portfolio() {
       period: "2024 - 2026",
       summary:
         "Led development of a scalable, secure payment platform using Node.js, Python, and AWS, improving transaction reliability and system performance. Built microservices, APIs, and CI/CD pipelines while integrating AI-driven automation and enhancing observability.",
-      skills: ["Node.js", "Python", "AWS", "Microservices", "LangChain", "Observability"],
+      skills: ["Node.js", "Python", "AWS", "Microservices", "CI/CD", "Observability"],
+    },
+    {
+      role: "Senior Software Engineer",
+      company: "Datadog",
+      period: "2020 - 2024",
+      summary:
+        "Built high-performance telemetry and observability systems using Go, Python, and Node.js, improving data ingestion, latency, and scalability across cloud environments. Developed full-stack features with React, optimized backend APIs and databases, and enhanced real-time AWS monitoring",
+      skills: ["Go", "Python", "Node.js", "React", "AWS", "Kafka", "Cassandra", "Observability"],
     },
     {
       role: "Software Engineer",
