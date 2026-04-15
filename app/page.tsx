@@ -41,23 +41,33 @@ export default function Portfolio() {
     { name: "API Platforms & Event-Driven Systems", level: 93 },
     { name: "Cloud Infrastructure (AWS/GCP/Azure)", level: 91 },
     { name: "Security, Compliance & Reliability", level: 90 },
+    { name: "Frontend Development (React, Next.js, Angular)", level: 85 },
   ]
 
   const experiences = [
     {
-      role: "Software Development Engineer",
+      role: "Senior Software Engineer",
       company: "Capital One",
-      period: "Sept. 2025 - Present",
-      summary: "Building secure, scalable systems with a focus on performance, reliability, and cloud-native delivery.",
-      skills: ["Payments", "Cloud", "System Design"],
+      period: "2024 - 2026",
+      summary:
+        "Led development of a scalable, secure payment platform using Node.js, Python, and AWS, improving transaction reliability and system performance. Built microservices, APIs, and CI/CD pipelines while integrating AI-driven automation and enhancing observability.",
+      skills: ["Node.js", "Python", "AWS", "Microservices", "CI/CD", "Observability"],
     },
     {
-      role: "Senior Smart Bar Assistant",
-      company: "University of Nottingham",
-      period: "2024 - 2025",
+      role: "Software Engineer",
+      company: "HCA Healthcare",
+      period: "2016 - 2019",
       summary:
-        "Led shift operations, provided primary support for Smart Bar systems, escalated complex incidents, and managed Azure MFA requests.",
-      skills: ["Azure", "Support", "Incident Response"],
+        "Developed real-time healthcare data systems and microservices for clinical applications, improving patient data processing and system efficiency. Built secure APIs, ETL pipelines, and containerized solutions for large-scale hospital networks.",
+      skills: ["Healthcare Data", "Microservices", "ETL", "APIs", "Docker"],
+    },
+    {
+      role: "Software Engineer",
+      company: "Plaid",
+      period: "2015 - 2016",
+      summary:
+        "Built financial data integration services and backend systems for high-volume banking APIs, improving data normalization and performance. Contributed to early frontend and infrastructure automation to support rapid fintech growth.",
+      skills: ["Fintech APIs", "Backend Systems", "Data Integration", "Automation"],
     },
   ]
 
@@ -329,26 +339,17 @@ export default function Portfolio() {
                 viewport={{ once: true }}
               >
                 <Card className="p-6 md:p-8 hover:shadow-lg transition-shadow">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-                    <div className="space-y-2">
-                      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">{experience.role}</h3>
-                      <p className="text-xl font-medium text-gray-800 dark:text-gray-200">{experience.company}</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{experience.period}</p>
-                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">{experience.summary}</p>
-                      <div className="flex flex-wrap gap-2 pt-1">
-                        {experience.skills.map((skill) => (
-                          <Badge key={skill} variant="secondary" className="text-xs">
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="w-16 h-16 rounded-lg bg-muted/70 border border-border flex items-center justify-center text-lg font-semibold text-muted-foreground">
-                      {experience.company
-                        .split(" ")
-                        .map((word) => word[0])
-                        .join("")
-                        .slice(0, 2)}
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">{experience.role}</h3>
+                    <p className="text-xl font-medium text-gray-800 dark:text-gray-200">{experience.company}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{experience.period}</p>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">{experience.summary}</p>
+                    <div className="flex flex-wrap gap-2 pt-1">
+                      {experience.skills.map((skill) => (
+                        <Badge key={skill} variant="secondary" className="text-xs">
+                          {skill}
+                        </Badge>
+                      ))}
                     </div>
                   </div>
                 </Card>
