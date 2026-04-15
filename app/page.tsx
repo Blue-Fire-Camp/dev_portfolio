@@ -151,11 +151,15 @@ export default function Portfolio() {
       <GlassNavbar />
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 text-slate-100"
+      >
         <motion.div
           style={{ y }}
-          className="absolute inset-0 bg-gradient-to-br from-background via-card to-background"
+          className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"
         />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(99,102,241,0.18),transparent_55%)] pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-indigo-500/10 blur-[130px] rounded-full -z-10 pointer-events-none mix-blend-screen" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.div
@@ -163,14 +167,14 @@ export default function Portfolio() {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground/800 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
               Manny Powell
             </h1>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-slate-100">
               Software Engineer at Capital One
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 font-light">
-               Web & Mobile Development | AI & SaaS Specialist | Cloud Infrastructure & Observability
+            <p className="text-xl md:text-2xl text-slate-300 mb-8 font-light">
+              Web & Mobile Development | AI & SaaS Specialist | Cloud Infrastructure & Observability
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
@@ -195,7 +199,7 @@ export default function Portfolio() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           }}
-          className="absolute top-20 left-10 w-20 h-20 bg-accent/10 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-20 h-20 bg-indigo-500/20 rounded-full blur-xl"
         />
         <motion.div
           animate={{
@@ -208,7 +212,7 @@ export default function Portfolio() {
             ease: "easeInOut",
             delay: 2,
           }}
-          className="absolute bottom-20 right-10 w-32 h-32 bg-secondary/10 rounded-full blur-xl"
+          className="absolute bottom-20 right-10 w-32 h-32 bg-sky-500/15 rounded-full blur-xl"
         />
       </section>
 
