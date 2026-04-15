@@ -165,7 +165,7 @@ export default function Portfolio() {
               Manny Powell
             </h1>
             <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
-              Full-Stack Developer
+              Software Engineer at Capital One
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 font-light">
               AI & SaaS Specialist | Building the Future of Web & Mobile
