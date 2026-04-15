@@ -105,7 +105,7 @@ export default function Portfolio() {
       description:
         "A modern, responsive todo app built with Next.js, TypeScript, and Tailwind CSS—focused on productivity and a polished daily task workflow.",
       icon: ListTodo,
-      badge: "Live",
+      //badge: "Live",
       technologies: ["React", "Productivity", "TypeScript", "Next.js", "Todo App", "Tailwind CSS", "Vercel"],
       liveUrl: "https://taskflow-todo-app-woad.vercel.app",
       image: "/taskflow.png",
@@ -133,7 +133,7 @@ export default function Portfolio() {
       description:
         "TypeScript health assistant powered by a Claude chatbot for conversational nutrition and physical therapy guidance. The agent handles multi-turn Q&A, calorie estimation from natural language, barcode scanning, and a PT practice management backend with dashboards, treatment plans, and clinical notes.",
       icon: Heart,
-      badge: "Live",
+      badge: "Progress",
       technologies: [
         "TypeScript",
         "Claude API",
@@ -144,7 +144,7 @@ export default function Portfolio() {
         "Clinical Notes",
       ],
       liveUrl: "",
-      image: "/habitaday.png",
+      image: "/habitday.png",
     },
 
   ]
@@ -326,7 +326,10 @@ export default function Portfolio() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-4">
+      <section
+        id="experience"
+        className="py-20 px-4 bg-slate-950 text-slate-100 border-y border-slate-800/80 dark:bg-slate-100 dark:text-slate-900 dark:border-slate-200/80"
+      >
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -335,9 +338,9 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">Experience</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              A snapshot of company roles and impact delivered across engineering and operations.
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-50 dark:text-slate-900">Experience</h2>
+            <p className="text-lg text-slate-300 dark:text-slate-600 max-w-3xl mx-auto">
+              A snapshot of company roles and impact delivered across engineering and operations domains.
             </p>
           </motion.div>
 
@@ -350,15 +353,19 @@ export default function Portfolio() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="p-6 md:p-8 hover:shadow-lg transition-shadow">
+                <Card className="p-6 md:p-8 hover:shadow-lg transition-shadow border border-slate-800/60 bg-slate-900/40 text-slate-100 shadow-md dark:border-slate-200 dark:bg-white dark:text-slate-900">
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">{experience.role}</h3>
-                    <p className="text-xl font-medium text-gray-800 dark:text-gray-200">{experience.company}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{experience.period}</p>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">{experience.summary}</p>
+                    <h3 className="text-2xl font-semibold text-slate-50 dark:text-slate-900">{experience.role}</h3>
+                    <p className="text-xl font-medium text-slate-200 dark:text-slate-800">{experience.company}</p>
+                    <p className="text-sm text-slate-400 dark:text-slate-500">{experience.period}</p>
+                    <p className="text-slate-300 dark:text-slate-600 leading-relaxed max-w-3xl">{experience.summary}</p>
                     <div className="flex flex-wrap gap-2 pt-1">
                       {experience.skills.map((skill) => (
-                        <Badge key={skill} variant="secondary" className="text-xs">
+                        <Badge
+                          key={skill}
+                          variant="secondary"
+                          className="text-xs border border-slate-700/80 bg-slate-800/80 text-slate-100 dark:border-slate-200 dark:bg-slate-100 dark:text-slate-900"
+                        >
                           {skill}
                         </Badge>
                       ))}
@@ -383,7 +390,7 @@ export default function Portfolio() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">Featured Projects</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Showcasing my expertise in AI-powered SaaS applications and mobile development
+              Showcasing my full-stack delivery beyond backend systems, AI-powered products, and polished frontend experiences
             </p>
           </motion.div>
 
