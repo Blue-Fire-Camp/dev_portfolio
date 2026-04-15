@@ -17,7 +17,6 @@ import {
   Phone,
   MapPin,
   Code,
-  Smartphone,
   Brain,
   Plane,
   Cloud,
@@ -36,12 +35,12 @@ export default function Portfolio() {
   }, [])
 
   const skills = [
-    { name: "Microservices & Distributed Systems", level: 95 },
-    { name: "Backend Engineering (Node.js/Python/Go/Java)", level: 94 },
-    { name: "Frontend Engineering (React/Angular)", level: 90 },
-    { name: "Cloud Architecture (AWS/GCP/Azure)", level: 92 },
-    { name: "API & Real-Time Data Processing", level: 93 },
-    { name: "Security, Compliance & Reliability", level: 91 },
+    { name: "Backend Architecture & Microservices", level: 95 },
+    { name: "AI Agentic Workflow Design", level: 94 },
+    { name: "LLM Integration & Orchestration", level: 92 },
+    { name: "API Platforms & Event-Driven Systems", level: 93 },
+    { name: "Cloud Infrastructure (AWS/GCP/Azure)", level: 91 },
+    { name: "Security, Compliance & Reliability", level: 90 },
   ]
 
   const experiences = [
@@ -205,10 +204,9 @@ export default function Portfolio() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">About Me</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Senior Software Engineer with 10+ years of experience building scalable backend and frontend systems
-              across fintech, healthcare, and cloud observability. I specialize in microservices, APIs, and real-time
-              data processing with Node.js, Python, Java, Go, React, and Angular, and I deliver secure cloud-native
-              solutions on AWS, GCP, and Azure.
+              Senior Software Engineer focused on backend platforms and AI agentic workflows. I build microservice
+              ecosystems, API-first architectures, and LLM-powered automation pipelines with Node.js, Python, Go, and
+              Java to deliver secure, cloud-native systems on AWS, GCP, and Azure.
             </p>
           </motion.div>
 
@@ -258,16 +256,16 @@ export default function Portfolio() {
               <div className="grid grid-cols-2 gap-4">
                 <Card className="p-6 text-center hover:shadow-lg transition-shadow">
                   <Code className="w-8 h-8 mx-auto mb-3 text-accent" />
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Distributed Backend Systems</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Backend Platform Engineering</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Scalable microservices, resilient APIs, and event-driven processing
+                    Scalable services, resilient APIs, event streams, and production observability
                   </p>
                 </Card>
                 <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                  <Smartphone className="w-8 h-8 mx-auto mb-3 text-accent" />
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Engineering Leadership</h4>
+                  <Brain className="w-8 h-8 mx-auto mb-3 text-accent" />
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">AI Agentic Workflows</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Mentoring teams, delivery ownership, and cross-functional execution
+                    Multi-agent orchestration, tool-calling pipelines, and reliable human-in-the-loop automation
                   </p>
                 </Card>
               </div>
@@ -277,23 +275,21 @@ export default function Portfolio() {
                   {[
                     "Node.js",
                     "Python",
-                    "Java",
-                    "Go",
-                    "React",
-                    "Angular",
                     "Microservices",
-                    "REST/GraphQL APIs",
-                    "Real-Time Streaming",
+                    "Agentic AI",
+                    "LLM Orchestration",
+                    "LangChain",
+                    "Hugging Face",
+                    "n8n",
+                    "Tool Calling",
+                    "RAG Pipelines",
+                    "REST APIs",
                     "AWS",
-                    "GCP",
-                    "Azure",
                     "Docker",
                     "Kubernetes",
-                    "CI/CD Pipelines",
-                    "Automated Testing",
-                    "HIPAA/PCI Compliance",
-                    "AI/GenAI Integration",
-                    "Observability",
+                    "Redis",
+                    "PostgreSQL",
+                    "React",
                     "TypeScript", 
                   ].map((tech) => (
                     <Badge key={tech} variant="secondary" className="text-xs">
