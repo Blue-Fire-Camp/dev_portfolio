@@ -36,11 +36,11 @@ export default function Portfolio() {
 
   const skills = [
     { name: "Backend Architecture & Microservices", level: 95 },
-    { name: "AI Agentic Workflow Design", level: 94 },
-    { name: "LLM Integration & Orchestration", level: 92 },
-    { name: "API Platforms & Event-Driven Systems", level: 93 },
-    { name: "Cloud Infrastructure (AWS/GCP/Azure)", level: 91 },
-    { name: "Security, Compliance & Reliability", level: 90 },
+    { name: "AI Agentic Workflow Design", level: 90 },
+    { name: "LLM Integration & Orchestration", level: 90 },
+    { name: "API Platforms & Event-Driven Systems", level: 85 },
+    { name: "Cloud Infrastructure (AWS/GCP/Azure)", level: 75 },
+    { name: "Security, Compliance & Reliability", level: 80 },
     { name: "Frontend Development (React, Next.js, Angular)", level: 85 },
   ]
 
@@ -51,7 +51,7 @@ export default function Portfolio() {
       period: "2024 - 2026",
       summary:
         "Led development of a scalable, secure payment platform using Node.js, Python, and AWS, improving transaction reliability and system performance. Built microservices, APIs, and CI/CD pipelines while integrating AI-driven automation and enhancing observability.",
-      skills: ["Node.js", "Python", "AWS", "Microservices", "CI/CD", "Observability"],
+      skills: ["Node.js", "Python", "AWS", "Microservices", "LangChain", "Observability"],
     },
     {
       role: "Software Engineer",
@@ -507,11 +507,8 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">
-              Let's Work Together
+            Let's Work Together
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Ready to bring your next project to life? Let's discuss how we can create something amazing together.
-            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -526,7 +523,7 @@ export default function Portfolio() {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <Mail className="w-5 h-5 text-accent" />
-                  <span className="text-gray-700 dark:text-gray-300">malshandissanayaka246@gmail.com
+                  <span className="text-gray-700 dark:text-gray-300">mnpowell246@hotmail.com
 </span>
                 </div>
                 <div className="flex items-center gap-4">
@@ -535,30 +532,6 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* ... existing social buttons ... */}
-              <div className="flex gap-4 pt-6">
-                <Button size="sm" variant="outline" asChild>
-                  <a href="https://github.com/Malshan20" target="_blank" rel="noopener noreferrer">
-                    <Github className="w-4 h-4 mr-2" />
-                    GitHub
-                  </a>
-                </Button>
-                <Button size="sm" variant="outline" asChild>
-                  <a href="https://www.linkedin.com/in/maleeshamalshan" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="w-4 h-4 mr-2" />
-                    LinkedIn
-                  </a>
-                </Button>
-                <Button size="sm" variant="outline" asChild>
-                  <a href="https://x.com/Ma_malshan" target="_blank" rel="noopener noreferrer">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                    X(Twitter)
-                  </a>
-
-                </Button>
-              </div>
             </motion.div>
 
             {/* ... existing contact form ... */}
@@ -594,11 +567,10 @@ export default function Portfolio() {
                       <circle cx="32" cy="28" r="4" fill="#fbbf24" />
                     </svg>
                   </motion.div>
-                  <h4 className="text-2xl font-bold text-accent mb-2">Let's Create Something Amazing!</h4>
+                  <h4 className="text-2xl font-bold text-accent mb-2">Feel free to reach out to me!</h4>
                   <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-4 max-w-md">
                     🚀 I’m always open to new opportunities, collaborations, and creative ideas.<br />
-                    <span className="font-semibold text-accent">Drop me a line</span> via email or connect on social media.<br />
-                    <span className="inline-block mt-2 animate-pulse text-accent font-semibold">Your next big project starts here.</span>
+        
                   </p>
                 </Card>
               </motion.div>
