@@ -36,12 +36,12 @@ export default function Portfolio() {
   }, [])
 
   const skills = [
-    { name: "React/Next.js", level: 95 },
-    { name: "Node.js", level: 90 },
-    { name: "React Native", level: 55 },
-    { name: "Supabase", level: 88 },
-    { name: "AI Integration", level: 92 },
-    { name: "GSAP/Framer Motion", level: 80 },
+    { name: "Microservices & Distributed Systems", level: 95 },
+    { name: "Backend Engineering (Node.js/Python/Go/Java)", level: 94 },
+    { name: "Frontend Engineering (React/Angular)", level: 90 },
+    { name: "Cloud Architecture (AWS/GCP/Azure)", level: 92 },
+    { name: "API & Real-Time Data Processing", level: 93 },
+    { name: "Security, Compliance & Reliability", level: 91 },
   ]
 
   const projects = [
@@ -187,9 +187,10 @@ export default function Portfolio() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">About Me</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Passionate Full-Stack Developer with expertise in AI-powered SaaS applications and mobile development. I
-              specialize in creating innovative solutions that bridge the gap between cutting-edge technology and user
-              experience.
+              Senior Software Engineer with 10+ years of experience building scalable backend and frontend systems
+              across fintech, healthcare, and cloud observability. I specialize in microservices, APIs, and real-time
+              data processing with Node.js, Python, Java, Go, React, and Angular, and I deliver secure cloud-native
+              solutions on AWS, GCP, and Azure.
             </p>
           </motion.div>
 
@@ -239,30 +240,43 @@ export default function Portfolio() {
               <div className="grid grid-cols-2 gap-4">
                 <Card className="p-6 text-center hover:shadow-lg transition-shadow">
                   <Code className="w-8 h-8 mx-auto mb-3 text-accent" />
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Web Development</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Modern React & Next.js applications</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Distributed Backend Systems</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    Scalable microservices, resilient APIs, and event-driven processing
+                  </p>
                 </Card>
                 <Card className="p-6 text-center hover:shadow-lg transition-shadow">
                   <Smartphone className="w-8 h-8 mx-auto mb-3 text-accent" />
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Mobile Apps</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Cross-platform React Native solutions</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Engineering Leadership</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    Mentoring teams, delivery ownership, and cross-functional execution
+                  </p>
                 </Card>
               </div>
               <Card className="p-6">
-                <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">Technologies I Work With</h4>
+                <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-100">Core Technologies & Platforms</h4>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "React",
-                    "Next.js",
                     "Node.js",
-                    "React Native",
-                    "Supabase",
-                    "Cursor AI IDE",
-                    "AI SDK",
-                    "GSAP",
-                    "Framer Motion",
-                    "TypeScript",
-                    "Tailwind CSS",
+                    "Python",
+                    "Java",
+                    "Go",
+                    "React",
+                    "Angular",
+                    "Microservices",
+                    "REST/GraphQL APIs",
+                    "Real-Time Streaming",
+                    "AWS",
+                    "GCP",
+                    "Azure",
+                    "Docker",
+                    "Kubernetes",
+                    "CI/CD Pipelines",
+                    "Automated Testing",
+                    "HIPAA/PCI Compliance",
+                    "AI/GenAI Integration",
+                    "Observability",
+                    "TypeScript", 
                   ].map((tech) => (
                     <Badge key={tech} variant="secondary" className="text-xs">
                       {tech}
