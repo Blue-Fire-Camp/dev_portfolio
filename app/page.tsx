@@ -148,7 +148,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background">
-      <GlassNavbar />
+      {/* <GlassNavbar /> */}
 
       {/* Hero Section */}
       <section
@@ -167,7 +167,7 @@ export default function Portfolio() {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-200 via-sky-200 to-cyan-300 bg-clip-text text-transparent">
               Manny Powell
             </h1>
             <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-slate-100">
@@ -530,7 +530,7 @@ export default function Portfolio() {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <Mail className="w-5 h-5 text-accent" />
-                  <span className="text-gray-700 dark:text-gray-300">mnpowell246@hotmail.com
+                  <span className="text-gray-700 dark:text-gray-300">mannypowell.mp@outlook.com
 </span>
                 </div>
                 <div className="flex items-center gap-4">
